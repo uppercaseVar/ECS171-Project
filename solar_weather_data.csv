@@ -1,4 +1,4 @@
-cloudcover,dew,humidity,precip,precipprob,solarenergy,solarradiation,sunelevation,temp,uvindex,whLifetime
+cloudcover,dew,humidity,precip,precipprob,solarenergy,solarradiation,sunelevation,temp,uvindex,whProduced
 47.6,39.5,90.04,0,0,0.1,0,-26.4,42.2,0,0
 57.5,39.1,89.49,0,0,0.1,0,-14.6,42,0,0
 54.9,39.2,92.63,0,0,0.1,26,-3.1,41.2,0,49
