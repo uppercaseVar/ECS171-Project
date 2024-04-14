@@ -1,0 +1,10 @@
+# .gitignore
+
+# Operating system files
+.DS_Store
+
+# IDE files
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
