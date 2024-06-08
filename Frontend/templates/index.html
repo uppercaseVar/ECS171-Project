@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Solar Energy Prediction</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <a class="navbar-brand" href="#">Solar Energy Prediction</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Solar Energy Prediction</h1>
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="hour">Hour of the Day:</label>
+                <input type="number" step="1" class="form-control" name="hour" id="hour" min="0" max="23" required>
+            </div>
+            <div class="form-group">
+                <label for="cloudcover">Cloud Cover (%):</label>
+                <input type="number" step="0.1" class="form-control" name="cloudcover" id="cloudcover" required>
+            </div>
+            <div class="form-group">
+                <label for="dew">Dew Point (°F):</label>
+                <input type="number" step="0.1" class="form-control" name="dew" id="dew" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" step="0.01" class="form-control" name="humidity" id="humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="precip">Precipitation (mm):</label>
+                <input type="number" step="0.1" class="form-control" name="precip" id="precip" required>
+            </div>
+            <div class="form-group">
+                <label for="precipprob">Probability of Precipitation (%):</label>
+                <input type="number" step="0.1" class="form-control" name="precipprob" id="precipprob" required>
+            </div>
+            <div class="form-group">
+                <label for="solarenergy">Solar Energy (kWh/m²):</label>
+                <input type="number" step="0.1" class="form-control" name="solarenergy" id="solarenergy" required>
+            </div>
+            <div class="form-group">
+                <label for="solarradiation">Solar Radiation (W/m²):</label>
+                <input type="number" step="0.1" class="form-control" name="solarradiation" id="solarradiation" required>
+            </div>
+            <div class="form-group">
+                <label for="sunelevation">Sun Elevation (°):</label>
+                <input type="number" step="0.1" class="form-control" name="sunelevation" id="sunelevation" required>
+            </div>
+            <div class="form-group">
+                <label for="temp">Temperature (°F):</label>
+                <input type="number" step="0.1" class="form-control" name="temp" id="temp" required>
+            </div>
+            <div class="form-group">
+                <label for="uvindex">UV Index:</label>
+                <input type="number" step="0.1" class="form-control" name="uvindex" id="uvindex" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
